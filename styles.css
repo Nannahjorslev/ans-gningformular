@@ -1,0 +1,1713 @@
+/* Generelle regler*/
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: black;
+}
+
+
+/*ANIMATIONER*/
+@keyframes fadeInLeft{
+    0%{
+    opacity: 0;
+    transform: translateX(-250px);
+    }
+    100%{
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+@keyframes fadeInRight{
+    0%{
+    opacity: 0;
+    transform: translateX(500px);
+    }
+    100%{
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+
+/* Styling af landing-page på forsiden*/
+.flimmer{
+width:100%;
+}
+
+.logo{
+display:flex;
+justify-content: center;
+}
+
+.logo-img{
+width:70%;
+margin-top:-40px;
+animation: fadeIn ease 5s;
+}
+
+/* Styling af kategori-knap div*/
+.kategori-knapper{
+margin:70px 0px;
+display:flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;  
+animation: fadeIn ease 7s;
+}
+
+/*Styling af hver kategori-knap*/
+#knap1{
+background-color: transparent;
+border: 2.5px solid #0034B2;
+color: white;
+box-shadow: 0 0 20px #0034B2;
+border-radius: 20px;
+padding: 10px 20px;
+text-align: center;
+display: inline-block;
+font-size: 14px;
+font-family: congenial-light, sans-serif;
+font-weight: 500;
+font-style: normal;
+cursor: pointer;
+width:130px;
+margin-left:240px;
+}
+ 
+#knap2{
+background-color: transparent;
+border: 2px solid #C400FF;
+color: white;
+box-shadow: 0 0 20px #C400FF;
+border-radius: 20px;
+padding: 10px 20px;
+text-align: center;
+display: inline-block;
+font-size: 14px;
+font-family: congenial-light, sans-serif;
+font-weight: 500;
+font-style: normal;
+cursor: pointer;
+width:130px;
+}
+    
+#knap3{
+background-color: transparent;
+border: 1.8px solid #FF7F00;
+color: white;
+box-shadow: 0 0 20px #FF7F00;
+border-radius: 20px;
+padding: 10px 20px;
+text-align: center;
+display: inline-block;
+font-size: 14px;
+font-family: congenial-light, sans-serif;
+font-weight: 500;
+font-style: normal;
+cursor: pointer;
+width:130px;
+}
+    
+#knap4{
+background-color: transparent;
+border: 2.5px solid #5E00C7;
+color: white;
+box-shadow: 0 0 20px #5E00C7;
+border-radius: 20px;
+padding: 10px 20px;
+text-align: center;
+display: inline-block;
+font-family: congenial-light, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 14px;
+cursor: pointer;
+width:130px;
+margin-right:240px;
+}
+
+/*Baggrundsfarve ved hover på kategori-knapperne*/
+#knap1:hover{
+background-color: #0034B2;
+}
+
+#knap2:hover{
+background-color: #C400FF;
+}
+
+#knap3:hover{
+background-color: #FF7F00;
+}
+
+#knap4:hover{
+background-color: #5E00C7;
+}
+
+
+/* Styling af sektion om upcoming */
+.teaser-upcoming{
+display:flex;
+flex-direction: column;
+margin-bottom:100px;
+background-image: url("images/photo-man.jpg");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.upc-overskrift{
+display:flex;
+justify-content: center;
+margin:75px 0px;
+}
+
+.teaser-tekst-og-billede{
+display:flex;
+flex-direction: row;
+width: 100%;
+}
+
+.upc-brødtekst{
+width:35%;
+padding-bottom:50px;
+padding-left:85px;
+padding-right:350px;
+}
+
+.upc-img{
+width:70%;
+padding-bottom: 50px;
+margin-left: 70px;
+}
+
+
+/* Styling af nyeste upcoming kunstnere billedkarrussel*/
+
+.nyeste-upcoming-overskrift{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 350.5px); /* Vores grid (8) styrer antal kolonner på rækken, 350.5px styrer bredden på scroll karrusellen*/
+    overflow: scroll;
+    height: 600px;
+    margin-top:50px;
+    margin-bottom:150px;
+    }
+    
+    li{
+    display: inline-block;
+    }
+
+    .nyeste-kunstner-navn{
+        padding-left:40px;
+        padding-top:40px;
+    }
+
+    .nyeste-kunstner-kategori{
+        padding-left:40px;
+    }
+
+
+
+
+/*Section med 4 boxe nederst på forsiden*/
+/* Create two equal columns that floats next to each other */
+.column {
+    width: 50%;
+    padding:30px 75px;
+    text-align: center;
+    height:350px;
+
+  }
+
+  .column > h2{
+    margin-bottom:30px;
+  }
+  
+  .row{
+    display:flex;
+    flex-direction: row;
+  }
+
+  .CTA-knap{
+    background-color:white;
+    border: none;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    width:130px;
+    margin-top:30px;
+    }
+
+
+/* Responsive regler til Upcoming forside */
+    /*Knapper på landing page*/
+    @media screen and (max-width:600px){
+        .kategori-knapper{
+            display:flex;
+            flex-direction:column;
+        }
+
+        #knap1, #knap2, #knap3, #knap4{
+            margin-top:20px;
+            font-size: 10px;
+            width:100px;
+        }
+
+        #knap1{
+            margin-left:0px;
+        }
+
+        #knap4{
+            margin-right:0px;
+        }
+    }
+
+    /* Teaser tekst og billede */
+    @media screen and (max-width:1000px){
+        .teaser-tekst-og-billede{
+            display:flex;
+            flex-direction: column; 
+        }
+
+        .upc-brødtekst{
+            max-width:100%;
+            padding-bottom:50px;
+            margin:0 auto;
+        }
+
+        .upc-img{
+            width:70%;
+            display:flex;
+            margin:0 auto;
+        }
+    }
+
+    /* 4 boxe på forsiden - ansøg / støt */
+    @media screen and (max-width:1000px){
+        .column > h2{
+            font-size:14pt;
+        }
+
+        .column > p{
+            font-size:10pt;
+        }
+    }
+
+    @media screen and (max-width:800px){
+        .row{
+            display:flex;
+            flex-direction: column;
+        }
+    }
+
+
+
+/* FOOTER */
+.footer-responsiv{
+    background-color: black;
+    display:flex;
+    justify-content: space-around;
+    }
+    
+    .footer-info{
+    display:flex;
+    flex-direction: column;
+    padding:30px 0px;
+    }
+
+    .footer-some-ikoner{
+        display:flex;
+        flex-direction:row;
+        padding-top:15px;
+    }
+
+    .hvid-logox3{
+        width:200px;
+    }
+
+
+/* Responsive regler til footer  */
+    @media screen and (max-width:800px){
+        /* Responsive Footer */
+        .footer-responsiv{
+            display:flex;
+            flex-direction:column;
+            float:left;
+            left:50%;
+            position: relative;
+        }
+
+        .footer-info{
+            float:left;
+            position: relative;
+            left:-50%;
+        }
+    }
+
+
+
+/* -------- NY HTML SIDE --------
+MUSIKERE SIDEN STARTER */
+
+#landing-page-musikere{
+    position: relative;
+    }
+    
+    #tilbage-knap{
+    margin: 2%;
+    }
+    
+    #tilbage-knap > h4{
+    padding-left: 15px;
+    color: white;
+    }
+    
+    #upcoming-logo{
+    margin-top: 0%;
+    margin-left: 10%;
+    animation: fadeIn ease 5s;
+    }
+
+    .musikere-overskrift{
+        position:absolute;
+        top:10%;
+        left:5%;
+        z-index: 2;
+        font-size:8vw;
+    }
+    
+    /*Landing page*/
+    #musiker-billede{
+    width: 80%;
+    animation: fadeIn ease 5s;
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:25px;
+
+    }
+
+    #knap1-fyldt{
+        background-color:#0034B2;
+        border: 2.5px solid #0034B2;
+        color: white;
+        box-shadow: 0 0 20px #0034B2;
+        border-radius: 20px;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        font-family: congenial-light, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        cursor: pointer;
+        width:130px;
+        margin-left:240px;   
+    }
+            
+    #tekst-til-musikere{
+    line-height: 1.6;
+    color: white;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    }
+        
+    /*KUNSTNER 1*/
+    .fadeInLeft{
+    background-image: url("images/iiris-30-1.jpg");
+    width: 100%;
+    animation: fadeInLeft 2s both; 
+    }
+    
+    .kunstner-view{
+    display: flex;
+    }
+    
+    .container{
+    display:flex;
+    width: 50%;
+    }
+
+    .animated{
+    height: 1000px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    }
+        
+    .baggrund-halv-halv{
+    background-color:black;
+    width:50%;
+    } 
+        
+    .kunstner-overskrift{
+    position: relative;
+    top:15%;
+    left:-20%;
+    color: white;
+    }
+            
+    .kunstner-brødtekst{
+    display:flex;
+    position: relative;
+    top:15%;
+    margin-left:15px;
+    align-items: center;
+    width:55%;
+    color:white;
+    }
+            
+    .kvadrat-kunstner-img{
+    position:relative;
+    top:15%;
+    left:-20%;
+    border: black 10px solid;
+    width:75%;
+    }
+        
+        
+    /*KUNSTNER 2*/
+    .fadeInRight{
+    background-image: url("images/victor-close-up.jpg");
+    width: 100%;
+    animation: fadeInRight 2s both; 
+    }
+        
+    .container{
+    display:flex;
+    width: 50%;
+    }
+        
+    .animated2{
+    height: 1000px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    }
+        
+    .baggrund-halv-halv{
+    background-color:black;
+    width:50%;
+    z-index: 1; 
+    } 
+        
+    .kunstner-overskrift1{
+    position: relative;
+    top:15%;
+    left:40%;
+    }
+            
+    .kunstner-brødtekst1{
+    display:block;
+    position: relative;
+    top:15%;
+    left:43%;
+    margin-right: 0px 15px;
+    align-items: center;
+    width:55%;
+    color:white;
+    }
+            
+    .kvadrat-kunstner-img1{
+    position:relative;
+    top:15%;
+    left:40%;
+    border: black 10px solid;
+    width:75%;
+    }
+        
+    /*Styling af knapperne venstre*/
+    .musiker-knap{
+    background-color: transparent;
+    border: 2.5px solid #0034B2;
+    color: white;
+    box-shadow: 0 0 20px #0034B2;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    width:170px;
+                
+    position:relative;
+    top:18%;
+    left:3%;
+    }
+                
+    .musiker-knap:hover{
+    background-color: #0034B2;
+    }
+        
+    /* Knap under kunstner højre*/
+    .musiker-knap1{
+    background-color: transparent;
+    border: 2.5px solid #0034B2;
+    color: white;
+    box-shadow: 0 0 20px #0034B2;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    width:170px;
+    position:relative;
+    top:18%;
+    left:43%;
+    }
+            
+    .musiker-knap1:hover{
+    background-color: #0034B2;
+    }
+
+
+    /*Responsivt design til musiker-siden*/ 
+        @media screen and (max-width:750px){
+            #landing-page-musikere > h5{
+            font-size: 45pt;
+            top: 35%;
+            }
+            .baggrund-halv-halv > p{
+            font-size:8pt;
+            }
+        
+            .kunstner-overskrift, .kunstner-overskrift1{
+            font-size: 18pt;
+            }
+        
+            .musiker-knap, .musiker-knap1{
+            width:130px;
+            font-size:10px;
+            }
+            #tekst-til-musikere{
+            font-size: 12pt;
+            }
+        }
+
+
+
+
+/* ------ NY HTML SIDE -------
+IIRIS - BAND */
+
+.landing-page-iiris{
+    display:flex;
+}
+
+.kolonne1-iiris, .kolonne2-iiris, .kolonne3-iiris{
+    width:33.3%;
+}
+
+.img-kolonne2-iiris, .img-kolonne3-iiris{
+    max-width:100%;
+    max-height:650px;
+}
+
+/* Animationer er lige sat på pause for at kode ordentligt inden! 
+
+.kolonne1-iiris{
+    background-color: transparent;
+    max-height:650px;
+    animation: fadeInRight 2.2s both;
+    z-index: 1;
+}
+
+.kolonne2-iiris{
+    animation: fadeInRight 2.2s both; 
+}
+.kolonne3-iiris{
+    animation: fadeInRight 4.2s both; 
+}  
+
+*/
+.stort-kunstner-navn-iiris{
+    position:relative;
+    top:2%;
+    left:5%;
+    font-size:18vw;
+}
+
+.hr-iiris{
+    position:relative;
+    top:12%;
+    width:300%;
+    border: 0.1px solid white;
+}
+
+.iiris-info{
+    position:relative;
+    top:18%;
+    left:5%;
+    font-size:3vw;
+}
+
+/* Kontakt-button*/
+.kontakt-button-iiris{
+    position: relative;
+    top:0%;
+    left:200%;
+    padding:10px 0px;
+    font-size:4vw;
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width:100%;
+    border:none;
+    cursor: pointer;
+}
+
+/* Pop up kontakt informationer */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+ .title {
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:16pt;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body, .modal-body > a {
+    padding: 10px 15px;
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    color: black;
+    font-style: normal;
+    line-height: 1.6;
+    font-size:12pt;
+  }
+
+  .modal-body, .modal-body > a:hover{
+    font-weight:900;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+
+/* Lidt tekst om iiris */
+.parallax-iiris-info {
+    background-image: url("images/iiris-cover.jpg");
+    min-height: 500px;
+  
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-iiris-info > p{
+    display:flex;
+    text-align: center;
+    width:60%;
+    margin: auto;
+    padding-top:180px; /* laves om til noget andet*/
+  }
+
+
+/*Spotify album billede og sange der kan lyttes til*/
+.spotify-iiris{
+    margin:150px 0;
+    display:flex;
+    justify-content: center;
+}
+
+.lyt-til-billede-iiris{
+    width:30%;
+}
+
+.lyt-til-iiris{
+    display:flex;
+    flex-direction: column;
+    margin-left:30px;
+}
+
+.lyt-til-overskrift-iiris{
+    display:flex;
+    justify-content: center;
+    margin-bottom:50px;
+}
+
+.spotify-embed-iiris{
+    border-radius:12px;
+    width:40vw;
+}
+
+
+/* Lidt mere tekst om iiris*/
+
+.parallax-mere-iiris-info {
+    background-image: url("images/IMG_1353.JPG");
+    min-height: 500px;
+  
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-mere-iiris-info > p{
+    display:flex;
+    text-align: center;
+    width:60%;
+    margin: auto;
+    padding-top:180px; /* laves om til noget andet*/
+  }
+
+.mere-iiris-info{
+    display:flex;
+    margin: 100px auto 0px;
+    width:60%;
+    text-align: center;
+}
+
+
+/* Video af iiris */
+.video-iiris{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:100px 0px;
+  }
+
+  .video-overskrift-iiris{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .iframe-container-iiris{
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%; 
+ 
+  }
+  .iframe-container-iiris iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+  }
+
+ 
+/* galleri af iiris */
+.galleri-iiris > img{
+    width:100%;
+}
+
+
+/* Responsive regler på iiris kunstner side */
+    /* Spotify section */
+    @media screen and (max-width:750px){
+        .spotify-iiris{
+            display:flex;
+            flex-direction: column;
+        }  
+
+        .lyt-til-billede-iiris{
+            display:flex;
+            margin: 0 auto 50px;
+            width:70%;
+        }
+
+        .lyt-til-iiris{
+            margin-left:0;
+            display: flex;
+            align-items: center;
+        }
+
+        .spotify-embed-iiris{
+            width:70vw;
+        }
+    }
+
+
+/* ------NY HTML SIDE
+MARCUZ JESS PETERSEN - SKUESPILLER */
+
+.landing-page-marcuz{
+    display:flex;
+}
+
+.kolonne1-marcuz, .kolonne2-marcuz, .kolonne3-marcuz{
+    width:33.3%;
+}
+
+.stort-kunstner-navn-marcuz{
+    position:relative;
+    top:2%;
+    left:5%;
+    font-size:10vw;
+}
+
+.hr-marcuz{
+    position:relative;
+    top:30%;
+    width:300%;
+    border: 0.1px solid white;
+}
+
+.marcuz-info{
+    position:relative;
+    top:35%;
+    left:5%;
+    font-size:3vw;
+}
+
+.kontakt-button-marcuz{
+    position: relative;
+    top:15%;
+    left:200%;
+    padding:10px 0px;
+    font-size:4vw;
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width:100%;
+    border:none;
+    cursor: pointer;
+}
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+ .title {
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:16pt;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body, .modal-body > a {
+    padding: 10px 15px;
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    color: black;
+    font-style: normal;
+    line-height: 1.6;
+    font-size:12pt;
+  }
+
+  .modal-body, .modal-body > a:hover{
+    font-weight:900;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+.img-kolonne2-marcuz, .img-kolonne3-marcuz{
+    max-width:100%;
+    max-height:650px;
+}
+
+
+
+/* Lidt tekst om kunstner */
+.parallax-marcuz-info{
+    background-image: url("images/marcuz-galleri-3.jpeg");
+    min-height: 500px;
+  
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-marcuz-info > p{
+    display:flex;
+    text-align: center;
+    width:60%;
+    margin: auto;
+    padding-top:180px; /* laves om til noget andet*/
+  }
+
+
+/* Medvirket i */
+.medvirket-i-marcuz{
+    display:flex;
+    padding: 100px 0px 0px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* 3 kort om hvad marcuz har medvirket i*/
+#cards-marcuz{
+    width:85%;
+
+    background-color:black;
+    margin: auto;
+    padding:30px;
+    text-align: center;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#trekort-marcuz{
+    width:300px;
+}
+
+#cards-marcuz > #trekort-marcuz > img{
+    width: 300px;
+}
+
+
+#cards-marcuz > #trekort-marcuz > p{
+    width:300px;
+    padding:50px 0px;
+}
+
+.trailer-button{
+    background-color: transparent;
+    border: 2.5px solid #C400FF;
+    color: white;
+    box-shadow: 0 0 20px #C400FF;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    width:130px;
+    margin-bottom:50px;
+
+}
+
+.trailer-button:hover{
+    background-color: #C400FF;
+}
+
+/* Mere info om Marcuz i parallax */
+.parallax-mere-kunstner-info-marcuz{
+    background-image: url("images/marcuz-galleri-4.jpeg");
+    min-height: 500px;
+  
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-mere-kunstner-info-marcuz > p{
+    display:flex;
+    text-align: center;
+    width:60%;
+    margin: auto;
+    padding-top:180px; /* laves om til noget andet*/
+  }
+
+
+/* Video af Marcuz */
+
+.video-marcuz{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:100px 0px;
+  }
+
+  .video-overskrift-marcuz{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+.iframe-container-marcuz{
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%; 
+ 
+  }
+  .iframe-container-marcuz iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+  }
+
+
+/* Citat fra Marcuz */
+  .citat-marcuz{
+    margin: 0px auto 200px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width:60%;
+  }
+
+  .citat-marcuz > h6{
+    color:white;
+    padding-top:30px;
+  }
+
+  /* galleri af Marcuz */
+    .galleri-marcuz > img{
+    width:100%;
+    }
+
+
+  /* Responsive regler på Marcuz kunstnerside */
+  /*Cards - medvirket i */
+    @media screen and (max-width:1100px){
+        #cards-marcuz{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+
+
+
+/* ------ NY HTML SIDE -------
+LONG ISLAND - BAND */
+
+.landing-page-long{
+    display:flex;
+}
+
+.kolonne1-long, .kolonne2-long, .kolonne3-long{
+    width:33.3%;
+}
+
+.img-kolonne1-long, .img-kolonne2-long, .img-kolonne3-long{
+    max-width:100%;
+    max-height:650px;
+}
+
+.img-kolonne1-long{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    max-width:33.3%;
+}
+
+.stort-kunstner-navn-long{
+    position:relative;
+    top:2%;
+    left:5%;
+    font-size:8vw;
+    z-index: 2;
+}
+
+.hr-long{
+    position:relative;
+    top:12%;
+    width:300%;
+    border: 0.1px solid white;
+    z-index:2
+}
+
+.long-info{
+    position:relative;
+    top:18%;
+    left:5%;
+    font-size:2.5vw;
+    z-index:2;
+}
+
+/* Kontakt button */
+.kontakt-button-long{
+    position: relative;
+    top:0%;
+    left:200%;
+    padding:10px 0px;
+    font-size:4vw;
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width:100%;
+    border:none;
+    cursor: pointer;
+    z-index:2;
+}
+/* Kontakt pop up informationer */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+ .title {
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:16pt;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body, .modal-body > a {
+    padding: 10px 15px;
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    color: black;
+    font-style: normal;
+    line-height: 1.6;
+    font-size:12pt;
+  }
+
+  .modal-body, .modal-body > a:hover{
+    font-weight:900;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+
+/* Lidt tekst om long island */
+.parallax-long-info {
+    background-image: url("images/long-island-cover2.jpg");
+    min-height: 500px;
+  
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-long-info > p{
+    display:flex;
+    text-align: center;
+    width:60%;
+    margin: auto;
+    padding-top:180px; /* laves om til noget andet*/
+  }
+
+
+/*Spotify album billede og sange der kan lyttes til*/
+.spotify-long{
+    margin:150px 0;
+    display:flex;
+    justify-content: center;
+}
+
+.lyt-til-billede-long{
+    width:30%;
+}
+
+.lyt-til-long{
+    display:flex;
+    flex-direction: column;
+    margin-left:30px;
+}
+
+.lyt-til-overskrift-long{
+    display:flex;
+    justify-content: center;
+    margin-bottom:50px;
+}
+
+.spotify-embed-long{
+    border-radius:12px;
+    width:40vw;
+}
+
+
+/* Lidt mere tekst om long island*/
+.parallax-mere-long-info {
+    background-image: url("images/long-island-pink.jpg");
+    min-height: 500px;
+  
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-mere-long-info > p{
+    display:flex;
+    text-align: center;
+    width:60%;
+    margin: auto;
+    padding-top:180px; /* laves om til noget andet*/
+  }
+
+.mere-long-info{
+    display:flex;
+    margin: 100px auto 0px;
+    width:60%;
+    text-align: center;
+}
+
+
+/* Video af iiris */
+.video-long{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:100px 0px;
+  }
+
+  .video-overskrift-long{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .iframe-container-long{
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%; 
+ 
+  }
+  .iframe-container-long iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+  }
+
+ 
+/* galleri af iiris */
+.galleri-long > img{
+    width:100%;
+}
+
+
+/* Responsive regler på iiris kunstner side */
+    /* Spotify section */
+    @media screen and (max-width:750px){
+        .spotify-long{
+            display:flex;
+            flex-direction: column;
+        }  
+
+        .lyt-til-billede-long{
+            display:flex;
+            margin: 0 auto 50px;
+            width:70%;
+        }
+
+        .lyt-til-long{
+            margin-left:0;
+            display: flex;
+            align-items: center;
+        }
+
+        .spotify-embed-long{
+            width:70vw;
+        }
+    }
+
+
+
+    /*------- NY HTML SIDE--------
+ERROR SIDE STARTER */
+
+#tilbage-knap-error{
+    margin: 2%;
+    display: flex;
+    }
+        
+    #tilbage-knap-error > h4{
+    padding-left: 15px;
+    color: white;
+    }
+    
+    #error-besked{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    color: white;
+    }
+    #flimmer-error{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    }
+    
+    /*Responsivt design til error-siden*/
+        @media screen and (max-width:750px){
+            #error-besked{
+            margin-top: 25%;
+            }
+            #error-besked > h6{
+            font-size: 27pt;
+            }
+        }  
+
+    
+/* ------- NY HTML SIDE--------
+LAUNCH SIDE STARTER */
+    
+    #tilbage-knap-launch{
+    margin: 2%;
+    display: flex;
+    }
+            
+    #tilbage-knap-launch > h4{
+    padding-left: 15px;
+    color: white;
+    }
+        
+    #launch-besked{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    color: white;
+    }
+    #flimmer-launch{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    }
+        
+    /*Responsivt design til error-siden*/
+        @media screen and (max-width:750px){
+            #launch-besked{
+            margin-top: 25%;
+            }
+            #launch-besked > h6{
+            font-size: 27pt;
+            }
+        }  
+    
+    
+    
+/* -------- NY HTML SIDE ------- 
+ANSØGNINGSFORMULAR STARTER */
+
+.flimmer2{
+    width:100%;
+    position: absolute;
+    top:0;
+    }
+
+#kontaktsection{
+    margin-top:150px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom:30px;
+}
+
+#kontaktsection > h3{
+    padding-top:30px;
+}
+
+/* kontaktformular */
+input[type=text], textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid black; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    line-height: 1.6;
+    font-size:12pt;
+
+  }
+  
+  input[type=submit] {
+    background-color:#C400FF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color:#0034B2;
+  }
+  
+  .kontaktformular {
+    width:60%;
+    background-color:white;
+    border-radius: 5px;
+    padding: 20px;
+
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    line-height: 1.6;
+    font-size:12pt;
+
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:50px;
+  }
+
+
+/* Responsive regler til ansøgningside */
+@media screen and (max-width:600px){
+    #kontaktsection{
+        margin-top:100px;
+    }
+
+    #kontaktsection > p{
+        font-size:10;
+    }
+
+    .kontaktformular{
+        font-size:10pt;
+    }
+
+    input[type=text], textarea{
+        font-size:10pt;
+    }
+}
+
+
+
+
+
+/*FONTS*/
+
+h1{
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 35pt;
+    }
+
+h2{
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    font-size:20pt;
+    }
+    
+h3{
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    font-size:16pt;
+    }
+
+    
+h4{
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12pt;
+    }
+
+h5{
+    font-family: hwt-arabesque,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    font-size:75pt;
+    }
+    
+            
+    h6{
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20pt;
+    }
+p{
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    line-height: 1.6;
+    font-size:12pt;
+    }
+    
+a{
+    font-family: congenial-light, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color:white;
+    line-height: 2.0;
+    font-size:12pt;
+    }
